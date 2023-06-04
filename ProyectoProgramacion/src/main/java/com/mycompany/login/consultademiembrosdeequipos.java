@@ -38,11 +38,7 @@ public class consultademiembrosdeequipos extends javax.swing.JFrame {
             llenarTabla.setValueAt(UO.getNombre(), i, 1);
             llenarTabla.setValueAt(UO.getApellido(), i, 2);
             llenarTabla.setValueAt(UO.getCorreo(), i, 3);
-            
-            
         }
-
-      
     }
 
     @SuppressWarnings("unchecked")

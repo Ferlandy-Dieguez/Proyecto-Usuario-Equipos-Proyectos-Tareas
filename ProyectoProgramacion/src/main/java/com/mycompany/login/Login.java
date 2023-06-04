@@ -32,7 +32,7 @@ public class Login {
         int incrementalTarea = 0;
 
         InicioLogin log = new InicioLogin();
-        masivo();
+        //masivo();
         log.setVisible(true);
 
     }
@@ -65,9 +65,8 @@ public class Login {
         Login.tareas.add(new Tarea(5, "Tarea 5", " ", "1", "2", "Solicitado", "e", 2));
         Login.tareas.add(new Tarea(6, "Tarea 6", " ", "1", "2", "Solicitado", "g", 3));
 
-        
         Login.tareas.add(new Tarea(7, "Tarea 7", " ", "1", "2", "Socilitado", "c", 4));
-        
+
         Login.incrementalUsuario = Login.usuarios.size();
         Login.incrementalEquipo = Login.equipos.size();
         Login.incrementalProyecto = Login.proyectos.size();

@@ -392,8 +392,6 @@ public class EditarTareas extends javax.swing.JFrame {
                              break;
                 
                 }
-                
-               
             }
         }
 

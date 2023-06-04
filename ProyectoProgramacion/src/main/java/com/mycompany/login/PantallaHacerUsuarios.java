@@ -20,7 +20,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
 
         switch (Login.usuarioLogueado.getRol()) {
             case 0:
-              //  BotonesAdmin();
+                BotonesAdmin();
                 break;
             case 1:
                 BotonesMiembro();
@@ -80,7 +80,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnConsultartodasTareas.setEnabled(false);
         btnEditarTareas.setEnabled(false);
         btnEliminarTareas.setEnabled(false);
-        
+
         btnConsultarTareasdeMiembros.setText("Consultar mis tareas");
     }
 
@@ -113,7 +113,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnConsultartodasTareas = new javax.swing.JButton();
         btnConsultarTareasdeMiembros = new javax.swing.JButton();
         btnEliminarTareas = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         btnPerfilAdministrador = new javax.swing.JButton();
         btnPerfil = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -355,8 +354,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             }
         });
 
-        btnConsultarTareasdeMiembros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnConsultarTareasdeMiembros.setForeground(new java.awt.Color(255, 0, 51));
+        btnConsultarTareasdeMiembros.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnConsultarTareasdeMiembros.setText("Listado de tareas de miembros");
         btnConsultarTareasdeMiembros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -379,15 +377,15 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(btnCrearTarea)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnConsultartodasTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEditarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnEliminarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(194, 194, 194)
+                .addGap(18, 18, 18)
                 .addComponent(btnConsultarTareasdeMiembros)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,13 +399,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                     .addComponent(btnEliminarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
-
-        jButton1.setText("Comprobacion");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         btnPerfilAdministrador.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPerfilAdministrador.setText("Mi perfil");
@@ -430,25 +421,23 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
+                .addGap(30, 30, 30)
                 .addComponent(btnPerfilAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75))
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -457,12 +446,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnPerfilAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jButton1)))
+                        .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -495,7 +481,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -605,10 +591,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Usted no pertenece a ningun equipo");
-
         }
-
-
     }//GEN-LAST:event_btnAsignarProyectoaEquipoActionPerformed
 
     private void btnEditarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarProyectoActionPerformed
@@ -661,7 +644,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Usted no pertenece a ningun equipo");
         }
-
     }//GEN-LAST:event_btnCrearTareaActionPerformed
 
     private void btnEditarTareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarTareasActionPerformed
@@ -672,8 +654,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Usted no pertenece a ningun equipo");
         }
-
-
     }//GEN-LAST:event_btnEditarTareasActionPerformed
 
     private void btnConsultartodasTareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultartodasTareasActionPerformed
@@ -696,41 +676,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         eliminar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnEliminarTareasActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        System.out.println("USUARIOS+++++");
-        for (Usuario u : Login.usuarios) {
-            try {
-                System.out.println(this.ow.writeValueAsString(u));
-            } catch (JsonProcessingException ex) {
-            }
-        }
-        System.out.println("EQUIPOS+++++");
-        for (Equipos e : Login.equipos) {
-            try {
-                System.out.println(this.ow.writeValueAsString(e));
-            } catch (JsonProcessingException ex) {
-            }
-        }
-        System.out.println("PROYECTOS+++++");
-        for (Proyecto p : Login.proyectos) {
-            try {
-                System.out.println(this.ow.writeValueAsString(p));
-            } catch (JsonProcessingException ex) {
-            }
-        }
-        System.out.println("TAREAS+++++");
-        for (Tarea t : Login.tareas) {
-            try {
-                System.out.println(this.ow.writeValueAsString(t));
-            } catch (JsonProcessingException ex) {
-            }
-        }
-        
-
-
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnPerfilAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilAdministradorActionPerformed
         MiPerfilAdmin miPerfil = new MiPerfilAdmin();
@@ -762,7 +707,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton btnPerfil;
     private javax.swing.JButton btnPerfilAdministrador;
     private javax.swing.JMenu btnSalir;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;

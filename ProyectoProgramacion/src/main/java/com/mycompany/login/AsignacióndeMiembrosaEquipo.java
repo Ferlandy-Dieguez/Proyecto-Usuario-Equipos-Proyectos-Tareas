@@ -266,12 +266,6 @@ public class AsignacióndeMiembrosaEquipo extends javax.swing.JFrame {
         }
         
         }
-               
-
-      
-       
-        
-        
     }//GEN-LAST:event_btnAsignarActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
@@ -282,7 +276,6 @@ public class AsignacióndeMiembrosaEquipo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegresarActionPerformed
 
     private void cbxEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxEquiposActionPerformed
-
 
     }//GEN-LAST:event_cbxEquiposActionPerformed
 
@@ -359,8 +352,6 @@ public class AsignacióndeMiembrosaEquipo extends javax.swing.JFrame {
         
     }//GEN-LAST:event_formWindowOpened
 
-    
-            
             
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu BarraMenu;

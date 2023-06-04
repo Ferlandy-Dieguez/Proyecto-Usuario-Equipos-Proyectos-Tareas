@@ -211,10 +211,6 @@ public class CreacionEquipos extends javax.swing.JFrame {
         }
         }
        
-        
-        
-
-
     }//GEN-LAST:event_crearButtonActionPerformed
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed

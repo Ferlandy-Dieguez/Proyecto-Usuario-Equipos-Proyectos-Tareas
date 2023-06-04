@@ -13,10 +13,8 @@ public class MiPerfilAdmin extends javax.swing.JFrame {
          this.lblApellido.setText(Login.usuarioLogueado.getApellido());
          this.lblCorreo.setText(Login.usuarioLogueado.getCorreo());
          this.lblUsuario.setText(Login.usuarioLogueado.getUsuario());
-         
-        
-        
-    }
+                
+            }
 
    
     @SuppressWarnings("unchecked")

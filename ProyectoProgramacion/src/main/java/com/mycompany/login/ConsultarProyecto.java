@@ -14,13 +14,13 @@ public class ConsultarProyecto extends javax.swing.JFrame {
     }
 
     private void llenarTabla() {
-        DefaultTableModel tabla = new DefaultTableModel(new String[]{"Id", "Nombre del proyecto", "Fecha inicio","Fecha final","Equipo Asignado","Estado"}, Login.proyectos.size());
+        DefaultTableModel tabla = new DefaultTableModel(new String[]{"Id", "Nombre del proyecto", "Fecha inicio", "Fecha final", "Equipo Asignado", "Estado"}, Login.proyectos.size());
         Table.setModel(tabla);
 
         TableModel llenarTabla = Table.getModel();
 
         for (int i = 0; i < Login.proyectos.size(); i++) {
-            Proyecto Pro = Login.proyectos.get(i); 
+            Proyecto Pro = Login.proyectos.get(i);
 
             llenarTabla.setValueAt(Pro.getId(), i, 0);
             llenarTabla.setValueAt(Pro.getNombre(), i, 1);
@@ -28,14 +28,11 @@ public class ConsultarProyecto extends javax.swing.JFrame {
             llenarTabla.setValueAt(Pro.getFechaFinal(), i, 3);
             llenarTabla.setValueAt(Pro.TipoEstados(), i, 5);
             String equipoA = "";
-            if(Pro.getEquipoAsignado()>0){
-            equipoA = Busqueda.GetEquipoById(Pro.getEquipoAsignado()).getNombre();
+            if (Pro.getEquipoAsignado() > 0) {
+                equipoA = Busqueda.GetEquipoById(Pro.getEquipoAsignado()).getNombre();
             }
             llenarTabla.setValueAt(equipoA, i, 4);
- 
         }
-        
-
     }
 
     @SuppressWarnings("unchecked")

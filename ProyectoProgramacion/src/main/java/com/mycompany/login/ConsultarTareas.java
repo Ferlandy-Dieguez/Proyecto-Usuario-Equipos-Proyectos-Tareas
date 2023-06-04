@@ -14,13 +14,13 @@ public class ConsultarTareas extends javax.swing.JFrame {
     }
 
     private void llenarTabla() {
-        DefaultTableModel tabla = new DefaultTableModel(new String[]{"ID Tarea","Proyecto", "Titulo","Descripcion", "Fecha inicio","Fecha final","Miembro Asignado","Estado"}, Login.tareas.size());
+        DefaultTableModel tabla = new DefaultTableModel(new String[]{"ID Tarea", "Proyecto", "Titulo", "Descripcion", "Fecha inicio", "Fecha final", "Miembro Asignado", "Estado"}, Login.tareas.size());
         Table.setModel(tabla);
 
         TableModel llenarTabla = Table.getModel();
 
         for (int i = 0; i < Login.tareas.size(); i++) {
-            Tarea tareass = Login.tareas.get(i); 
+            Tarea tareass = Login.tareas.get(i);
 
             llenarTabla.setValueAt(tareass.getId(), i, 0);
             llenarTabla.setValueAt(Busqueda.GetProyectoById(tareass.getProyecto()).getNombre(), i, 1);
@@ -29,15 +29,10 @@ public class ConsultarTareas extends javax.swing.JFrame {
             llenarTabla.setValueAt(tareass.getFechaInicio(), i, 4);
             llenarTabla.setValueAt(tareass.getFechaFin(), i, 5);
             Usuario tempUser = Busqueda.GetUsuarioByCorreo(tareass.getUsuarioAsignado());
-            String nombreUser = tempUser.getNombre()+" "+tempUser.getApellido();
-             llenarTabla.setValueAt(nombreUser, i,6);
+            String nombreUser = tempUser.getNombre() + " " + tempUser.getApellido();
+            llenarTabla.setValueAt(nombreUser, i, 6);
             llenarTabla.setValueAt(tareass.getEstado(), i, 7);
-            
-           
- 
         }
-        
-
     }
 
     @SuppressWarnings("unchecked")

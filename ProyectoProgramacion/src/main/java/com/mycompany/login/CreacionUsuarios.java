@@ -254,8 +254,7 @@ public class CreacionUsuarios extends javax.swing.JFrame {
         } else {
           JOptionPane.showMessageDialog(this, "No ha seleccionado un rol");
         }
-
-        
+       
     }//GEN-LAST:event_crearButtonActionPerformed
 
     private void regresarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarButtonActionPerformed

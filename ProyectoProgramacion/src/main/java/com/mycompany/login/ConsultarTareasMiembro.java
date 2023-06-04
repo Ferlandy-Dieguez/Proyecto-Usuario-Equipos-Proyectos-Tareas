@@ -182,7 +182,7 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
         jLabel1.setText("Usuario:");
         jLabel1.setToolTipText("");
 
-        cbxUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione un usuario" }));
+        cbxUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Seleccione un usuario" }));
         cbxUser.setAutoscrolls(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -317,11 +317,11 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(PanelCBX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAtras)
                     .addComponent(btnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -370,7 +370,6 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void TableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableMouseClicked
-        // TODO add your handling code here:
         System.out.println("hola");
         DefaultTableModel model = (DefaultTableModel) Table.getModel();
         int columna = Table.getSelectedRow();
@@ -417,7 +416,6 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
