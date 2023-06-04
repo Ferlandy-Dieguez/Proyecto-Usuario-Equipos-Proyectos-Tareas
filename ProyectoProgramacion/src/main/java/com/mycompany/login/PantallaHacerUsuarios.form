@@ -41,7 +41,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="9" max="32767" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -107,7 +107,7 @@
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
@@ -447,9 +447,7 @@
                       <Component id="btnEditarTareas" min="-2" pref="148" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnEliminarTareas" min="-2" pref="148" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnAsignarTareasaMiembros" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
                       <Component id="btnConsultarTareasdeMiembros" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -463,7 +461,6 @@
                           <Component id="btnCrearTarea" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="btnConsultartodasTareas" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="btnEditarTareas" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="btnAsignarTareasaMiembros" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="btnConsultarTareasdeMiembros" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="btnEliminarTareas" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
@@ -500,24 +497,10 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="10" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ver todas las tareas"/>
+                <Property name="text" type="java.lang.String" value="Ver las tareas de todos "/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsultartodasTareasActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAsignarTareasaMiembros">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="33" green="0" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Asignar tareas a miembros"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAsignarTareasaMiembrosActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnConsultarTareasdeMiembros">
@@ -528,7 +511,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Listado de tareas de cada miembro"/>
+                <Property name="text" type="java.lang.String" value="Listado de tareas de miembros"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConsultarTareasdeMiembrosActionPerformed"/>

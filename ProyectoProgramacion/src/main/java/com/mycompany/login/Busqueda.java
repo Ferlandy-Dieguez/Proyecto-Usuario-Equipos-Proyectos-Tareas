@@ -84,6 +84,30 @@ public class Busqueda {
         }
         return user;
     }
+    
+    
+    public static Usuario GetUsuarioByCorreo(String correo) {
+        Usuario user = new Usuario();
+        for (Usuario u : Login.usuarios) {
+
+            if (u.getCorreo().equals(correo)) {
+                user = u;
+            }
+        }
+        return user;
+    }
+    
+        public static String GetCorreoUsuarioByID (int id) {
+            String correo ="";
+        Usuario user = new Usuario();
+        for (Usuario u : Login.usuarios) {
+
+            if (u.getId()== id) {
+                correo=u.getCorreo();
+            }
+        }
+        return correo;
+    }
 
     public static int GetIdUsuarioByNombreApellido(String nombre) {
         int idUser = 0;

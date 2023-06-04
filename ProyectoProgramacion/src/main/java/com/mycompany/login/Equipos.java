@@ -11,7 +11,7 @@ public class Equipos {
 
 
     public Equipos(int id, String nombre, int lider, ArrayList miembros) {
-        this.miembros = new ArrayList<>();
+        this.miembros = miembros;
      
         this.id = id;
         this.nombre = nombre;

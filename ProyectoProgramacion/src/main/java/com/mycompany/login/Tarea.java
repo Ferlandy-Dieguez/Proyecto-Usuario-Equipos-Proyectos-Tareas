@@ -6,19 +6,22 @@ public class Tarea {
     private String titulo;
     private String descripcion;
     private String fechaInicio;
-    private String fechaFinal;
-    private int estados;
-    private int usuarioAsignado;
+    private String fechaFin;
+    private String estado;
+    private String usuarioAsignado;
+    
+    private int proyecto;
 
-    public Tarea(int id, String titulo, String descripcion, String fechaInicio, String fechaFinal, int estados, int usuarioAsignado) {
+    public Tarea(int id, String titulo, String descripcion, String fechaInicio, String fechaFin, String estado, String usuarioAsignado, int proyecto) {
 
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fechaInicio = fechaInicio;
-        this.fechaFinal = fechaFinal;
-        this.estados = estados;
+        this.fechaFin = fechaFin;
+        this.estado = estado;
         this.usuarioAsignado = usuarioAsignado;
+        this.proyecto = proyecto;
     }
 
     public Tarea() {
@@ -57,52 +60,39 @@ public class Tarea {
         this.fechaInicio = fechaInicio;
     }
 
-    public String getFechaFinal() {
-        return fechaFinal;
+    public String getFechaFin() {
+        return fechaFin;
     }
 
     public void setFechaFinal(String fechaFinal) {
-        this.fechaFinal = fechaFinal;
+        this.fechaFin = fechaFinal;
     }
 
-    public int getEstados() {
-        return estados;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setEstados(int estados) {
-        this.estados = estados;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public int getUsuarioAsignado() {
+  
+
+    public String getUsuarioAsignado() {
         return usuarioAsignado;
     }
 
-    public void setUsuarioAsignado(int usuarioAsignado) {
+    public void setUsuarioAsignado(String usuarioAsignado) {
         this.usuarioAsignado = usuarioAsignado;
     }
 
-    public String TipoEstados() {
-        String tipoEstados = "";
-
-        switch (this.estados) {
-            case 0:
-                tipoEstados = "";
-                break;
-            case 1:
-                tipoEstados = "Solicitado";
-                break;
-            case 2:
-                tipoEstados = "En Proceso";
-                break;
-            case 3:
-                tipoEstados = "Finalizado";
-                break;
-
-            default:
-                tipoEstados = "";
-        }
-
-        return tipoEstados;
-
+    public int getProyecto() {
+        return proyecto;
     }
+
+    public void setProyecto(int proyecto) {
+        this.proyecto = proyecto;
+    }
+
+   
 }

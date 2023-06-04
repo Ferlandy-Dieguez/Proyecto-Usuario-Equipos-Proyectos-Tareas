@@ -1,6 +1,7 @@
 package com.mycompany.login;
 
 import static com.mycompany.login.Login.usuarios;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class CreacionEquipos extends javax.swing.JFrame {
@@ -195,6 +196,7 @@ public class CreacionEquipos extends javax.swing.JFrame {
         us.setEquipoAsignado(Login.incrementalEquipo);
         equipoNuevo.setNombre(nombre);
         equipoNuevo.setLider(lider);
+        equipoNuevo.setMiembros(new ArrayList<Integer>());
         
         Login.equipos.add(equipoNuevo);
 

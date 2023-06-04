@@ -14,7 +14,7 @@ public class ConsultarTareas extends javax.swing.JFrame {
     }
 
     private void llenarTabla() {
-        DefaultTableModel tabla = new DefaultTableModel(new String[]{"Id", "Titulo","Descripcion", "Fecha inicio","Fecha final","Miembro Asignado","Estado"}, Login.tareas.size());
+        DefaultTableModel tabla = new DefaultTableModel(new String[]{"ID Tarea","Proyecto", "Titulo","Descripcion", "Fecha inicio","Fecha final","Miembro Asignado","Estado"}, Login.tareas.size());
         Table.setModel(tabla);
 
         TableModel llenarTabla = Table.getModel();
@@ -23,20 +23,17 @@ public class ConsultarTareas extends javax.swing.JFrame {
             Tarea tareass = Login.tareas.get(i); 
 
             llenarTabla.setValueAt(tareass.getId(), i, 0);
-            llenarTabla.setValueAt(tareass.getTitulo(), i, 1);
-            llenarTabla.setValueAt(tareass.getDescripcion(), i, 2);
-            llenarTabla.setValueAt(tareass.getFechaInicio(), i, 3);
-            llenarTabla.setValueAt(tareass.getFechaFinal(), i, 4);
+            llenarTabla.setValueAt(Busqueda.GetProyectoById(tareass.getProyecto()).getNombre(), i, 1);
+            llenarTabla.setValueAt(tareass.getTitulo(), i, 2);
+            llenarTabla.setValueAt(tareass.getDescripcion(), i, 3);
+            llenarTabla.setValueAt(tareass.getFechaInicio(), i, 4);
+            llenarTabla.setValueAt(tareass.getFechaFin(), i, 5);
+            Usuario tempUser = Busqueda.GetUsuarioByCorreo(tareass.getUsuarioAsignado());
+            String nombreUser = tempUser.getNombre()+" "+tempUser.getApellido();
+             llenarTabla.setValueAt(nombreUser, i,6);
+            llenarTabla.setValueAt(tareass.getEstado(), i, 7);
             
-            llenarTabla.setValueAt(tareass.TipoEstados(), i, 6);
-            
-            String TareaA = "";
-            if(tareass.getUsuarioAsignado()>0){
-                
-            TareaA = Busqueda.GetUsuarioById(tareass.getUsuarioAsignado()).getNombre();
-            }
-            
-            llenarTabla.setValueAt(TareaA, i, 5);
+           
  
         }
         
@@ -62,13 +59,13 @@ public class ConsultarTareas extends javax.swing.JFrame {
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Titulo", "Descripcion", "Fecha inicio", "Fecha final", "Miembro Asignado", "Estado"
+                "ID Tarea", "Proyecto", "Titulo", "Descripcion", "Fecha inicio", "Fecha final", "Miembro Asignado", "Estado"
             }
         ));
         jScrollPane1.setViewportView(Table);

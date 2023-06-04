@@ -42,8 +42,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnEditarTareas.setEnabled(false);
 
         btnEliminarTareas.setEnabled(false);
-        btnAsignarTareasaMiembros.setEnabled(false);
-        btnConsultarTareasdeMiembros.setEnabled(false);
+        btnConsultarTareasdeMiembros.setEnabled(true);
 
     }
 
@@ -58,7 +57,8 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnAsignarMiembroaEquipo.setEnabled(false);
 
         btnConsultarProyectos.setEnabled(false);
-        btnConsultarTareasdeMiembros.setEnabled(false);
+        btnConsultarTareasdeMiembros.setEnabled(true);
+        btnConsultartodasTareas.setEnabled(false);
 
     }
 
@@ -76,11 +76,12 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnEditarProyecto.setEnabled(false);
         btnAsignarProyectoaEquipo.setEnabled(false);
 
-        btnAsignarTareasaMiembros.setEnabled(false);
         btnCrearTarea.setEnabled(false);
         btnConsultartodasTareas.setEnabled(false);
         btnEditarTareas.setEnabled(false);
         btnEliminarTareas.setEnabled(false);
+        
+        btnConsultarTareasdeMiembros.setText("Consultar mis tareas");
     }
 
     @SuppressWarnings("unchecked")
@@ -110,7 +111,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnCrearTarea = new javax.swing.JButton();
         btnEditarTareas = new javax.swing.JButton();
         btnConsultartodasTareas = new javax.swing.JButton();
-        btnAsignarTareasaMiembros = new javax.swing.JButton();
         btnConsultarTareasdeMiembros = new javax.swing.JButton();
         btnEliminarTareas = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -348,25 +348,16 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         });
 
         btnConsultartodasTareas.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        btnConsultartodasTareas.setText("Ver todas las tareas");
+        btnConsultartodasTareas.setText("Ver las tareas de todos ");
         btnConsultartodasTareas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultartodasTareasActionPerformed(evt);
             }
         });
 
-        btnAsignarTareasaMiembros.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnAsignarTareasaMiembros.setForeground(new java.awt.Color(255, 0, 51));
-        btnAsignarTareasaMiembros.setText("Asignar tareas a miembros");
-        btnAsignarTareasaMiembros.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAsignarTareasaMiembrosActionPerformed(evt);
-            }
-        });
-
         btnConsultarTareasdeMiembros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnConsultarTareasdeMiembros.setForeground(new java.awt.Color(255, 0, 51));
-        btnConsultarTareasdeMiembros.setText("Listado de tareas de cada miembro");
+        btnConsultarTareasdeMiembros.setText("Listado de tareas de miembros");
         btnConsultarTareasdeMiembros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarTareasdeMiembrosActionPerformed(evt);
@@ -394,9 +385,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addComponent(btnEditarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnEliminarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAsignarTareasaMiembros)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(194, 194, 194)
                 .addComponent(btnConsultarTareasdeMiembros)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -408,7 +397,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                     .addComponent(btnCrearTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultartodasTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAsignarTareasaMiembros, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultarTareasdeMiembros, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEliminarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
@@ -481,7 +469,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -507,7 +495,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -695,15 +683,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnConsultartodasTareasActionPerformed
 
-    private void btnAsignarTareasaMiembrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignarTareasaMiembrosActionPerformed
-
-        AsignacióndeTareasAMiembros asignacion = new AsignacióndeTareasAMiembros();
-        asignacion.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnAsignarTareasaMiembrosActionPerformed
-
     private void btnConsultarTareasdeMiembrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarTareasdeMiembrosActionPerformed
 
+        ConsultarTareasMiembro consultar = new ConsultarTareasMiembro();
+        consultar.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnConsultarTareasdeMiembrosActionPerformed
 
     private void btnEliminarTareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarTareasActionPerformed
@@ -736,6 +720,15 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             } catch (JsonProcessingException ex) {
             }
         }
+        System.out.println("TAREAS+++++");
+        for (Tarea t : Login.tareas) {
+            try {
+                System.out.println(this.ow.writeValueAsString(t));
+            } catch (JsonProcessingException ex) {
+            }
+        }
+        
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -749,7 +742,6 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAsignarMiembroaEquipo;
     private javax.swing.JButton btnAsignarProyectoaEquipo;
-    private javax.swing.JButton btnAsignarTareasaMiembros;
     private javax.swing.JButton btnConsultarEquipos;
     private javax.swing.JButton btnConsultarMiembrodelEquipo;
     private javax.swing.JButton btnConsultarProyectos;

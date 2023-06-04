@@ -1,5 +1,6 @@
 package com.mycompany.login;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class EditarTareas extends javax.swing.JFrame {
@@ -10,6 +11,18 @@ public class EditarTareas extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Editar tareas UMG"); /// Nombre 
         this.setLocationRelativeTo(null);  /// Centrar la ventana
+    }
+
+    public final void llenarcbxUsuarios() {
+        cbxUsuarioAsignado.removeAllItems();
+        cbxUsuarioAsignado.addItem("Seleccione un usuario");
+        Proyecto proyecto = Busqueda.GetProyectoById(modificar.getProyecto());
+        ArrayList<Integer> miembros = Busqueda.GetEquipoById(proyecto.getEquipoAsignado()).getMiembros();
+        for (Integer miembro : miembros) {
+
+            Usuario tempUser = Busqueda.GetUsuarioById(miembro);
+            cbxUsuarioAsignado.addItem(tempUser.getNombre() + " " + tempUser.getApellido());
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -32,6 +45,10 @@ public class EditarTareas extends javax.swing.JFrame {
         regresarButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         cbxEstadoDelProyecto = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        cbxUsuarioAsignado = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        lblProyecto = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         BarraMenu = new javax.swing.JMenu();
         itemCrearUsuario = new javax.swing.JMenuItem();
@@ -100,7 +117,11 @@ public class EditarTareas extends javax.swing.JFrame {
 
         jLabel7.setText("Estado:");
 
-        cbxEstadoDelProyecto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Solicitado", "En Proceso", "Finalizado" }));
+        cbxEstadoDelProyecto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solicitado", "En Proceso", "Finalizado" }));
+
+        jLabel8.setText("Usuario Asignado:");
+
+        jLabel9.setText("Proyecto:");
 
         BarraMenu.setText("Archivo");
 
@@ -180,27 +201,36 @@ public class EditarTareas extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(btnBuscar)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(descripcionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(fechaInicioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(regresarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(26, 26, 26)
-                                            .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(fechaFinalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(cbxEstadoDelProyecto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                            .addComponent(lblProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(descripcionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(fechaInicioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(regresarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(26, 26, 26)
+                                                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(fechaFinalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(cbxEstadoDelProyecto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(cbxUsuarioAsignado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                                 .addGap(12, 12, 12))
                             .addComponent(modificarButton))
                         .addGap(28, 28, 28))
@@ -219,7 +249,11 @@ public class EditarTareas extends javax.swing.JFrame {
                 .addComponent(buscarTareaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnBuscar)
-                .addGap(25, 25, 25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(lblProyecto))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(descripcionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -235,7 +269,11 @@ public class EditarTareas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(cbxEstadoDelProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(cbxUsuarioAsignado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(btnBorrarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -252,12 +290,20 @@ public class EditarTareas extends javax.swing.JFrame {
 
         if (modificar != null) {
 
-            modificar.setDescripcion(descripcionTextField.getText());
-            modificar.setFechaInicio(fechaInicioTextField.getText());
-            modificar.setFechaFinal(fechaFinalTextField.getText());
-            modificar.setEstados(cbxEstadoDelProyecto.getSelectedIndex());
+            if ("Seleccione un usuario".equals(cbxUsuarioAsignado.getSelectedItem().toString())) {
+                JOptionPane.showMessageDialog(this, "Debe asignar un usuario a la tarea");
 
-            JOptionPane.showMessageDialog(this, "Tarea modificada correctamente");
+            } else {
+                modificar.setDescripcion(descripcionTextField.getText());
+                modificar.setFechaInicio(fechaInicioTextField.getText());
+                modificar.setFechaFinal(fechaFinalTextField.getText());
+                modificar.setEstado(cbxEstadoDelProyecto.getSelectedItem().toString());
+
+                int idUsuarioAsignado = Busqueda.GetIdUsuarioByNombreApellido(cbxUsuarioAsignado.getSelectedItem().toString());
+                modificar.setUsuarioAsignado(Busqueda.GetUsuarioById(idUsuarioAsignado).getCorreo());
+
+                JOptionPane.showMessageDialog(this, "Tarea modificada correctamente");
+            }
 
         } else {
             JOptionPane.showMessageDialog(this, "Debe buscar una tarea con el titulo. ");
@@ -331,18 +377,37 @@ public class EditarTareas extends javax.swing.JFrame {
         modificar = null;
 
         for (Tarea UO : Login.tareas) {
-            if (UO.getDescripcion().equals(buscarTareaTextField.getText())) {
-                modificar = UO;
-                break;
+            if (UO.getTitulo().equals(buscarTareaTextField.getText())) {
+                
+                if(Login.usuarioLogueado.getRol()==2){
+                    Usuario tempUser = Busqueda.GetUsuarioByCorreo(UO.getUsuarioAsignado());
+                    if(tempUser.getEquipoAsignado()==Login.usuarioLogueado.getEquipoAsignado()){
+                            modificar = UO;
+                             break;
+                    } else {
+                    }
+                } else {
+                    
+                    modificar = UO;
+                             break;
+                
+                }
+                
+               
             }
         }
 
         if (modificar != null) {
 
+            lblProyecto.setText(Busqueda.GetProyectoById(modificar.getProyecto()).getNombre());
             descripcionTextField.setText(modificar.getDescripcion());
             fechaInicioTextField.setText(modificar.getFechaInicio());
-            fechaFinalTextField.setText(modificar.getFechaFinal());
-             cbxEstadoDelProyecto.setSelectedIndex(modificar.getEstados());
+            fechaFinalTextField.setText(modificar.getFechaFin());
+            cbxEstadoDelProyecto.setSelectedItem(modificar.getEstado());
+            llenarcbxUsuarios();
+            Usuario tempUser = Busqueda.GetUsuarioByCorreo(modificar.getUsuarioAsignado());
+            String nUser = tempUser.getNombre() + " " + tempUser.getApellido();
+            cbxUsuarioAsignado.setSelectedItem(nUser);
 
         } else {
             JOptionPane.showMessageDialog(this, "Tarea no encontrada");
@@ -351,7 +416,7 @@ public class EditarTareas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnBorrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarDatosActionPerformed
-
+        lblProyecto.setText("");
         descripcionTextField.setText("");
         fechaInicioTextField.setText("");
         fechaFinalTextField.setText("");
@@ -374,6 +439,7 @@ public class EditarTareas extends javax.swing.JFrame {
     private javax.swing.JMenu btnSalir;
     private javax.swing.JTextField buscarTareaTextField;
     private javax.swing.JComboBox<String> cbxEstadoDelProyecto;
+    private javax.swing.JComboBox<String> cbxUsuarioAsignado;
     private javax.swing.JTextField descripcionTextField;
     private javax.swing.JTextField fechaFinalTextField;
     private javax.swing.JTextField fechaInicioTextField;
@@ -386,7 +452,10 @@ public class EditarTareas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel lblProyecto;
     private javax.swing.JButton modificarButton;
     private javax.swing.JButton regresarButton;
     // End of variables declaration//GEN-END:variables
