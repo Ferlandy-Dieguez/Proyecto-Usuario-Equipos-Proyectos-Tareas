@@ -240,7 +240,7 @@ public class AsignacióndeProyectosaEquipo extends javax.swing.JFrame {
         if (cbxEquipos.getSelectedItem().toString().equals("") || cbxProyectos.getSelectedItem().toString().equals("")) {
             JOptionPane.showMessageDialog(this, "No se han completado todos los campos");
         } else {
-            int teamID = cbxEquipos.getSelectedIndex();
+            int teamID = Busqueda.GetIDEquipoByName(cbxEquipos.getSelectedItem().toString());
             int proID = 0;
 
             Equipos team = Busqueda.GetEquipoById(teamID);
