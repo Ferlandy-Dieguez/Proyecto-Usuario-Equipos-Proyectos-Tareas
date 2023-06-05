@@ -20,7 +20,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
 
         switch (Login.usuarioLogueado.getRol()) {
             case 0:
-               // BotonesAdmin();
+                BotonesAdmin();
                 break;
             case 1:
                 BotonesMiembro();
@@ -44,11 +44,20 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnEliminarTareas.setEnabled(false);
         btnConsultarTareasdeMiembros.setEnabled(true);
 
+        ///Ocultar btn
+        btnPerfil.setVisible(false);
+        /*
+        btnCrearTarea.setVisible(false);
+        btnConsultartodasTareas.setVisible(false);
+        btnEditarTareas.setVisible(false);
+        btnEliminarTareas.setVisible(false);*/
+
     }
 
     public final void BotonesGerente() {
 
-        jPanel2.setVisible(false);
+        //jPanel2Usuarios.setVisible(false);
+        jLabel2.setVisible(true);
 
         btnPerfilAdministrador.setEnabled(false);
 
@@ -60,10 +69,29 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnConsultarTareasdeMiembros.setEnabled(true);
         btnConsultartodasTareas.setEnabled(false);
 
+        btnCrearUsuario.setEnabled(false);
+        btnConsultarUsuario.setEnabled(false);
+        btnEditarUsuario.setEnabled(false);
+        btnEliminarUsuario.setEnabled(false);
+
+        ///Ocultar btn
+        btnPerfilAdministrador.setVisible(false);
+        /*
+        btnCrearEquipo.setVisible(false);
+        btnConsultarEquipos.setVisible(false);
+        btnAsignarMiembroaEquipo.setVisible(false);
+        btnConsultarProyectos.setVisible(false);
+        btnConsultartodasTareas.setVisible(false);*/
     }
 
     public final void BotonesMiembro() {
-        jPanel2.setVisible(false);
+        // jPanel2Usuarios.setVisible(false);
+        // jLabel2.setVisible(false);
+
+        btnCrearUsuario.setEnabled(false);
+        btnConsultarUsuario.setEnabled(false);
+        btnEditarUsuario.setEnabled(false);
+        btnEliminarUsuario.setEnabled(false);
 
         btnPerfilAdministrador.setEnabled(false);
 
@@ -82,6 +110,10 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnEliminarTareas.setEnabled(false);
 
         btnConsultarTareasdeMiembros.setText("Consultar mis tareas");
+
+        ///Ocultar btn
+        btnPerfilAdministrador.setVisible(false);
+
     }
 
     @SuppressWarnings("unchecked")
@@ -91,23 +123,23 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnInicio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel2Usuarios = new javax.swing.JPanel();
         btnCrearUsuario = new javax.swing.JButton();
         btnEditarUsuario = new javax.swing.JButton();
         btnConsultarUsuario = new javax.swing.JButton();
         btnEliminarUsuario = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel3Equipos = new javax.swing.JPanel();
         btnCrearEquipo = new javax.swing.JButton();
         btnConsultarEquipos = new javax.swing.JButton();
         btnAsignarMiembroaEquipo = new javax.swing.JButton();
         btnConsultarMiembrodelEquipo = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel4Proyectos = new javax.swing.JPanel();
         btnCrearProyecto = new javax.swing.JButton();
         btnEditarProyecto = new javax.swing.JButton();
         btnConsultarProyectos = new javax.swing.JButton();
         btnAsignarProyectoaEquipo = new javax.swing.JButton();
         btnConsultarProyectosdelEquipo = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
+        jPanel5Tareas = new javax.swing.JPanel();
         btnCrearTarea = new javax.swing.JButton();
         btnEditarTareas = new javax.swing.JButton();
         btnConsultartodasTareas = new javax.swing.JButton();
@@ -123,6 +155,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         btnSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -141,9 +174,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alfombra-roja.png"))); // NOI18N
         jLabel1.setText(" BIENVENIDO");
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuarios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
-        jPanel2.setToolTipText("");
+        jPanel2Usuarios.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2Usuarios.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuarios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
+        jPanel2Usuarios.setToolTipText("");
 
         btnCrearUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCrearUsuario.setText("Crear Usuario");
@@ -181,11 +214,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel2UsuariosLayout = new javax.swing.GroupLayout(jPanel2Usuarios);
+        jPanel2Usuarios.setLayout(jPanel2UsuariosLayout);
+        jPanel2UsuariosLayout.setHorizontalGroup(
+            jPanel2UsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2UsuariosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnCrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
@@ -196,11 +229,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addComponent(btnEliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jPanel2UsuariosLayout.setVerticalGroup(
+            jPanel2UsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2UsuariosLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2UsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -208,8 +241,8 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Equipos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
+        jPanel3Equipos.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3Equipos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Equipos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
 
         btnCrearEquipo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCrearEquipo.setText("Crear Equipo");
@@ -247,11 +280,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3EquiposLayout = new javax.swing.GroupLayout(jPanel3Equipos);
+        jPanel3Equipos.setLayout(jPanel3EquiposLayout);
+        jPanel3EquiposLayout.setHorizontalGroup(
+            jPanel3EquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3EquiposLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnCrearEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
@@ -262,11 +295,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addComponent(btnConsultarMiembrodelEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(60, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        jPanel3EquiposLayout.setVerticalGroup(
+            jPanel3EquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3EquiposLayout.createSequentialGroup()
                 .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3EquiposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultarEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAsignarMiembroaEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -274,8 +307,8 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Proyectos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
+        jPanel4Proyectos.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4Proyectos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Proyectos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
 
         btnCrearProyecto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCrearProyecto.setText("Crear Proyecto");
@@ -322,11 +355,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel4ProyectosLayout = new javax.swing.GroupLayout(jPanel4Proyectos);
+        jPanel4Proyectos.setLayout(jPanel4ProyectosLayout);
+        jPanel4ProyectosLayout.setHorizontalGroup(
+            jPanel4ProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4ProyectosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnCrearProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -339,11 +372,11 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addComponent(btnConsultarProyectosdelEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        jPanel4ProyectosLayout.setVerticalGroup(
+            jPanel4ProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4ProyectosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel4ProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultarProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -352,8 +385,8 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
-        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tareas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
+        jPanel5Tareas.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5Tareas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tareas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(255, 102, 0))); // NOI18N
 
         btnCrearTarea.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCrearTarea.setText("Crear Tarea");
@@ -400,11 +433,12 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel5TareasLayout = new javax.swing.GroupLayout(jPanel5Tareas);
+        jPanel5Tareas.setLayout(jPanel5TareasLayout);
+        jPanel5TareasLayout.setHorizontalGroup(
+            jPanel5TareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5TareasLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(btnCrearTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnConsultartodasTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -414,13 +448,13 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addComponent(btnEliminarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnConsultarTareasdeMiembros, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                .addGap(40, 40, 40))
+                .addGap(34, 34, 34))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+        jPanel5TareasLayout.setVerticalGroup(
+            jPanel5TareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5TareasLayout.createSequentialGroup()
                 .addContainerGap(21, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel5TareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsultartodasTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditarTareas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -463,7 +497,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 .addGap(0, 37, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
                         .addComponent(btnPerfilAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -480,10 +514,10 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jPanel4Proyectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel2Usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel5Tareas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3Equipos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -499,20 +533,20 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2Usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(34, 34, 34)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3Equipos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(39, 39, 39)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel4Proyectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel5Tareas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(25, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -774,9 +808,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel2Usuarios;
+    private javax.swing.JPanel jPanel3Equipos;
+    private javax.swing.JPanel jPanel4Proyectos;
+    private javax.swing.JPanel jPanel5Tareas;
     // End of variables declaration//GEN-END:variables
 }
