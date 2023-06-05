@@ -34,6 +34,7 @@ public class InicioLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 0, 0));
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setForeground(new java.awt.Color(255, 255, 0));
 
         lblIniciar1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
@@ -42,6 +43,7 @@ public class InicioLogin extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/B1.jpg"))); // NOI18N
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setPreferredSize(new java.awt.Dimension(342, 234));
 
         lbnCorreo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -98,9 +100,8 @@ public class InicioLogin extends javax.swing.JFrame {
                         .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(29, 29, 29)
                         .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(PasswordField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                        .addComponent(usuarioTextField, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addComponent(PasswordField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(usuarioTextField, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
