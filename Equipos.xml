@@ -1,0 +1,12 @@
+<equipos>
+<equipo id="1">
+<nombre>Equipo 1</nombre>
+<lider>1</lider>
+<miembros>[2, 3, 4]</miembros>
+</equipo>
+<equipo id="2">
+<nombre>Equipo 2</nombre>
+<lider>7</lider>
+<miembros>[5, 6]</miembros>
+</equipo>
+</equipos>

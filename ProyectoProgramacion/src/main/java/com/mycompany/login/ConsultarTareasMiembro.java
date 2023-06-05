@@ -164,6 +164,7 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
         jScrollPane1.setViewportView(Table);
 
         btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagina-de-inicio.png"))); // NOI18N
         btnInicio.setText("Inicio");
         btnInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,6 +173,7 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
         });
 
         btnAtras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/regresar.png"))); // NOI18N
         btnAtras.setText("Regresar");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +181,7 @@ public class ConsultarTareasMiembro extends javax.swing.JFrame implements Action
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("Usuario:");
         jLabel1.setToolTipText("");
 
