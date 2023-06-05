@@ -1,0 +1,16 @@
+<proyectos>
+<proyecto id="1">
+<nombre>Proyecto 1</nombre>
+<fechaInicio>1</fechaInicio>
+<fechaFinal>2</fechaFinal>
+<equipoAsignado>1</equipoAsignado>
+<estados>1</estados>
+</proyecto>
+<proyecto id="2">
+<nombre>Proyecto 2</nombre>
+<fechaInicio>2</fechaInicio>
+<fechaFinal>3</fechaFinal>
+<equipoAsignado>2</equipoAsignado>
+<estados>3</estados>
+</proyecto>
+</proyectos>

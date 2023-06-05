@@ -32,7 +32,7 @@ public class Login {
         int incrementalTarea = 0;
 
         InicioLogin log = new InicioLogin();
-        masivo();
+        //masivo();
         log.setVisible(true);
 
     }
