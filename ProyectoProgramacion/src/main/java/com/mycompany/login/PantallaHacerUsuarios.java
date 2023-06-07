@@ -194,15 +194,15 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/equipos.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lista-de-tareas.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, -1, -1));
 
-        btnCrearUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCrearUsuario.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnCrearUsuario.setText("Crear Usuario");
         btnCrearUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCrearUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +212,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         });
         jPanel1.add(btnCrearUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 127, 60));
 
-        btnConsultarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnConsultarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnConsultarUsuario.setText("Listado de Usuarios");
         btnConsultarUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnConsultarUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -220,9 +220,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultarUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 135, 60));
+        jPanel1.add(btnConsultarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 160, 60));
 
-        btnEditarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEditarUsuario.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnEditarUsuario.setText("Editar Usuario");
         btnEditarUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnEditarUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -240,9 +240,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnEliminarUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, 148, 60));
+        jPanel1.add(btnEliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 148, 60));
 
-        btnCrearEquipo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCrearEquipo.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnCrearEquipo.setText("Crear Equipo");
         btnCrearEquipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCrearEquipo.addActionListener(new java.awt.event.ActionListener() {
@@ -250,9 +250,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnCrearEquipoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCrearEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 120, 60));
+        jPanel1.add(btnCrearEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 120, 60));
 
-        btnConsultarEquipos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnConsultarEquipos.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnConsultarEquipos.setText("Listado de Equipos");
         btnConsultarEquipos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnConsultarEquipos.addActionListener(new java.awt.event.ActionListener() {
@@ -260,9 +260,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultarEquiposActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarEquipos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 148, 60));
+        jPanel1.add(btnConsultarEquipos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 148, 60));
 
-        btnAsignarMiembroaEquipo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAsignarMiembroaEquipo.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnAsignarMiembroaEquipo.setText("Asignar miembro a equipo");
         btnAsignarMiembroaEquipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAsignarMiembroaEquipo.addActionListener(new java.awt.event.ActionListener() {
@@ -270,9 +270,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnAsignarMiembroaEquipoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAsignarMiembroaEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 171, 60));
+        jPanel1.add(btnAsignarMiembroaEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 190, 60));
 
-        btnConsultarMiembrodelEquipo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnConsultarMiembrodelEquipo.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnConsultarMiembrodelEquipo.setText("Consultar miembros del equipo");
         btnConsultarMiembrodelEquipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnConsultarMiembrodelEquipo.addActionListener(new java.awt.event.ActionListener() {
@@ -280,9 +280,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultarMiembrodelEquipoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarMiembrodelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, 195, 60));
+        jPanel1.add(btnConsultarMiembrodelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 220, 60));
 
-        btnCrearProyecto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCrearProyecto.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnCrearProyecto.setText("Crear Proyecto");
         btnCrearProyecto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCrearProyecto.addActionListener(new java.awt.event.ActionListener() {
@@ -290,7 +290,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnCrearProyectoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCrearProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 101, 60));
+        jPanel1.add(btnCrearProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 110, 60));
 
         btnConsultarProyectos.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         btnConsultarProyectos.setText("Ver todos los proyectos");
@@ -300,9 +300,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultarProyectosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarProyectos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 147, 60));
+        jPanel1.add(btnConsultarProyectos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 147, 60));
 
-        btnEditarProyecto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEditarProyecto.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnEditarProyecto.setText("Editar Proyecto");
         btnEditarProyecto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnEditarProyecto.addActionListener(new java.awt.event.ActionListener() {
@@ -310,9 +310,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnEditarProyectoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditarProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 128, 60));
+        jPanel1.add(btnEditarProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 128, 60));
 
-        btnAsignarProyectoaEquipo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnAsignarProyectoaEquipo.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnAsignarProyectoaEquipo.setText("Asignar proyecto a equipo");
         btnAsignarProyectoaEquipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnAsignarProyectoaEquipo.addActionListener(new java.awt.event.ActionListener() {
@@ -320,9 +320,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnAsignarProyectoaEquipoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAsignarProyectoaEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 170, 60));
+        jPanel1.add(btnAsignarProyectoaEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 180, 60));
 
-        btnConsultarProyectosdelEquipo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnConsultarProyectosdelEquipo.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnConsultarProyectosdelEquipo.setText("Listado de proyectos del equipo");
         btnConsultarProyectosdelEquipo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnConsultarProyectosdelEquipo.addActionListener(new java.awt.event.ActionListener() {
@@ -330,9 +330,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultarProyectosdelEquipoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarProyectosdelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 450, 198, 60));
+        jPanel1.add(btnConsultarProyectosdelEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, 220, 60));
 
-        btnCrearTarea.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnCrearTarea.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnCrearTarea.setText("Crear Tarea");
         btnCrearTarea.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnCrearTarea.addActionListener(new java.awt.event.ActionListener() {
@@ -340,7 +340,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnCrearTareaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCrearTarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, 100, 60));
+        jPanel1.add(btnCrearTarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, 100, 60));
 
         btnConsultartodasTareas.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         btnConsultartodasTareas.setText("Ver las tareas de todos ");
@@ -350,9 +350,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultartodasTareasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultartodasTareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 550, 173, 60));
+        jPanel1.add(btnConsultartodasTareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 540, 173, 60));
 
-        btnEditarTareas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEditarTareas.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnEditarTareas.setText("Editar Tareas");
         btnEditarTareas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnEditarTareas.addActionListener(new java.awt.event.ActionListener() {
@@ -360,9 +360,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnEditarTareasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditarTareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 550, 130, 60));
+        jPanel1.add(btnEditarTareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 540, 130, 60));
 
-        btnEliminarTareas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEliminarTareas.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnEliminarTareas.setText("Eliminar Tarea");
         btnEliminarTareas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnEliminarTareas.addActionListener(new java.awt.event.ActionListener() {
@@ -370,9 +370,9 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnEliminarTareasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminarTareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, 126, 60));
+        jPanel1.add(btnEliminarTareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, 126, 60));
 
-        btnConsultarTareasdeMiembros.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnConsultarTareasdeMiembros.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         btnConsultarTareasdeMiembros.setText("Listado de tareas de miembros");
         btnConsultarTareasdeMiembros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btnConsultarTareasdeMiembros.addActionListener(new java.awt.event.ActionListener() {
@@ -380,7 +380,7 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
                 btnConsultarTareasdeMiembrosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarTareasdeMiembros, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 550, 189, 60));
+        jPanel1.add(btnConsultarTareasdeMiembros, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 540, 220, 60));
 
         Usuarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Usuarios.setForeground(new java.awt.Color(255, 0, 0));
@@ -390,17 +390,17 @@ public class PantallaHacerUsuarios extends javax.swing.JFrame {
         Equipos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Equipos.setForeground(new java.awt.Color(255, 0, 0));
         Equipos.setText("Equipos");
-        jPanel1.add(Equipos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 110, 30));
+        jPanel1.add(Equipos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 110, 30));
 
         Proyectos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Proyectos.setForeground(new java.awt.Color(255, 0, 0));
         Proyectos.setText("Proyectos");
-        jPanel1.add(Proyectos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 420, 110, 30));
+        jPanel1.add(Proyectos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 400, 110, 30));
 
         Tareas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Tareas.setForeground(new java.awt.Color(255, 0, 0));
         Tareas.setText("Tareas");
-        jPanel1.add(Tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 100, 30));
+        jPanel1.add(Tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 100, 30));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fondo.png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 650));

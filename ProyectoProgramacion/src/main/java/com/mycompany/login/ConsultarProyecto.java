@@ -80,7 +80,7 @@ public class ConsultarProyecto extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(Table);
 
-        btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagina-de-inicio.png"))); // NOI18N
         btnInicio.setText("Inicio");
         btnInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +89,7 @@ public class ConsultarProyecto extends javax.swing.JFrame {
             }
         });
 
-        btnAtras.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnAtras.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/regresar.png"))); // NOI18N
         btnAtras.setText("Regresar");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {

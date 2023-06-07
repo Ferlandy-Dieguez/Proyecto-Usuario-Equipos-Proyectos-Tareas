@@ -82,7 +82,7 @@ public class ConsultarUsuarios extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(Table);
 
-        btnAtras.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnAtras.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnAtras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/regresar.png"))); // NOI18N
         btnAtras.setText("Regresar");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class ConsultarUsuarios extends javax.swing.JFrame {
             }
         });
 
-        btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pagina-de-inicio.png"))); // NOI18N
         btnInicio.setText("Inicio");
         btnInicio.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +189,7 @@ public class ConsultarUsuarios extends javax.swing.JFrame {
                         .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCargarUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
